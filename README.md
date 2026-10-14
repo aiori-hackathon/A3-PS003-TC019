@@ -1,4 +1,3 @@
-
 # A3-PS003-TC019
 Federated Traffic-Flow Prediction with Communication-Cost Evaluation – AIORI Hackathon 3
 ## Team Introduction Video
