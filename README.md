@@ -6,7 +6,7 @@ Federated Traffic-Flow Prediction with Communication-Cost Evaluation – AIORI H
 ## Team Members
 - Student 1: Anshika Sharon Sonwani
 - Student 2: Freida B Rodrigues
-- Mentor: Shamanth N
+- Mentor: Dr. Shamanth N
 
 ## Project Overview
 This project aims to develop a federated learning simulator for traffic-flow prediction. It allows multiple virtual traffic junctions to train local models while keeping their raw data locally. The project evaluates prediction accuracy and communication costs by comparing federated learning with a centralized model.
