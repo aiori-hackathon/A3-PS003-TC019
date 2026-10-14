@@ -17,6 +17,3 @@ This project aims to develop a federated learning simulator for traffic-flow pre
 - Use Federated Averaging (FedAvg) to combine local model updates.
 - Compare the federated approach with a centralized model trained on all the data.
 - Measure prediction accuracy and communication cost across training rounds.
-
-## Team Introduction Video
-**YouTube Video:** 
