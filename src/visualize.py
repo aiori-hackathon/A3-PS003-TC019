@@ -19,6 +19,25 @@ plt.style.use("seaborn-v0_8-whitegrid" if "seaborn-v0_8-whitegrid" in plt.style.
 COLORS = ["#2b5c8f", "#d95f02", "#7570b3", "#1b9e77", "#e7298a"]
 
 
+def _safe_savefig(output_path: Path):
+    """Safely saves a plot, handling potential Windows file locks from image viewers."""
+    output_path = Path(output_path)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        plt.savefig(output_path, dpi=200, bbox_inches="tight")
+        print(f"Plot saved to: {output_path}")
+    except OSError:
+        # If open in Windows Photo viewer, save to temp and attempt replace
+        temp_path = output_path.with_name(f"temp_{output_path.name}")
+        plt.savefig(temp_path, dpi=200, bbox_inches="tight")
+        try:
+            import os
+            os.replace(temp_path, output_path)
+            print(f"Plot saved to: {output_path}")
+        except Exception:
+            print(f"Plot saved to: {temp_path} (original locked by external viewer)")
+
+
 def plot_traffic_overview(
     df: pd.DataFrame,
     output_path: Optional[Path] = None,
@@ -69,10 +88,7 @@ def plot_traffic_overview(
 
     plt.tight_layout()
     if output_path:
-        output_path = Path(output_path)
-        output_path.parent.mkdir(parents=True, exist_ok=True)
-        plt.savefig(output_path, dpi=200, bbox_inches="tight")
-        print(f"Traffic overview plot saved to: {output_path}")
+        _safe_savefig(output_path)
     plt.close()
 
 
@@ -157,10 +173,7 @@ def plot_distribution_comparison(
 
     plt.tight_layout()
     if output_path:
-        output_path = Path(output_path)
-        output_path.parent.mkdir(parents=True, exist_ok=True)
-        plt.savefig(output_path, dpi=200, bbox_inches="tight")
-        print(f"Distribution comparison plot saved to: {output_path}")
+        _safe_savefig(output_path)
     plt.close()
 
 
@@ -224,8 +237,5 @@ def plot_chronological_splits(
 
     plt.tight_layout()
     if output_path:
-        output_path = Path(output_path)
-        output_path.parent.mkdir(parents=True, exist_ok=True)
-        plt.savefig(output_path, dpi=200, bbox_inches="tight")
-        print(f"Chronological split plot saved to: {output_path}")
+        _safe_savefig(output_path)
     plt.close()
