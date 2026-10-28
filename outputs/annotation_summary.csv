@@ -1,0 +1,10 @@
+Metric,Value
+Total processed images,25551
+Images with vehicles,23575
+Images without vehicles,1976
+Total detected vehicles,116274
+Total cars,59901
+Total motorcycles,26318
+Total buses,10399
+Total trucks,19656
+Failed images in this run,0

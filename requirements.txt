@@ -1,0 +1,23 @@
+pip freeze > requirements.txt
+
+# YOLO object detection
+ultralytics
+
+# Image processing
+opencv-python
+Pillow
+
+# Data processing
+pandas
+numpy
+
+# Progress bars
+tqdm
+
+# Deep learning
+torch
+torchvision
+
+# Utilities
+PyYAML
+requests
