@@ -1,0 +1,5 @@
+Junction ID,Junction Name,Distribution,Total Samples,Mean Flow,Std Flow,Max Flow,Car %,Motorcycle %,Bus %,Truck %
+junction_1,Silk Board Arterial,Non-IID (profile),6901,5.01,3.54,23,60.2,18.0,7.6,14.2
+junction_2,Majestic Urban Core,Non-IID (profile),4351,4.48,3.38,24,43.0,36.1,6.7,14.2
+junction_3,Hebbal Ring Road,Non-IID (profile),4847,4.37,3.3,21,45.4,17.8,13.2,23.6
+junction_4,Indiranagar Central,Non-IID (profile),4461,4.04,3.01,21,51.6,22.4,9.1,16.9

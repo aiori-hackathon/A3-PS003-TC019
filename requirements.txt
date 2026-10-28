@@ -1,5 +1,3 @@
-pip freeze > requirements.txt
-
 # YOLO object detection
 ultralytics
 
@@ -11,6 +9,12 @@ Pillow
 pandas
 numpy
 
+# Machine learning & evaluation
+scikit-learn
+
+# Visualization
+matplotlib
+
 # Progress bars
 tqdm
 
@@ -21,3 +25,4 @@ torchvision
 # Utilities
 PyYAML
 requests
+pypdf
