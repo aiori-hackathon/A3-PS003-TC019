@@ -1,0 +1,28 @@
+# YOLO object detection
+ultralytics
+
+# Image processing
+opencv-python
+Pillow
+
+# Data processing
+pandas
+numpy
+
+# Machine learning & evaluation
+scikit-learn
+
+# Visualization
+matplotlib
+
+# Progress bars
+tqdm
+
+# Deep learning
+torch
+torchvision
+
+# Utilities
+PyYAML
+requests
+pypdf

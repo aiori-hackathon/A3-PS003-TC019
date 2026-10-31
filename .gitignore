@@ -1,0 +1,51 @@
+
+# =================================
+# ORIGINAL DATASET - DO NOT UPLOAD
+# =================================
+
+BMD45/
+
+# =================================
+# GENERATED ANNOTATION OUTPUTS
+# =================================
+
+outputs/annotated_images/
+outputs/labels/
+
+# Keep generated CSV summaries
+!outputs/vehicle_counts.csv
+!outputs/annotation_summary.csv
+!outputs/failed_images.csv
+
+# =================================
+# PYTHON ENVIRONMENT
+# =================================
+
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
+
+# =================================
+# MODEL WEIGHTS
+# =================================
+
+*.pt
+*.pth
+*.onnx
+
+# =================================
+# TEMPORARY FILES
+# =================================
+
+.ipynb_checkpoints/
+*.log
+.DS_Store
+Thumbs.db
+
+# =================================
+# IDE
+# =================================
+
+.vscode/
