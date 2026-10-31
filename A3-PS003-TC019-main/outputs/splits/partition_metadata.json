@@ -1,0 +1,53 @@
+{
+  "dataset_name": "BMD-45 Bengaluru Mobility Dataset",
+  "total_records": 20560,
+  "num_junctions": 4,
+  "train_ratio": 0.8,
+  "test_ratio": 0.2,
+  "window_size": 12,
+  "horizon": 1,
+  "feature_columns": [
+    "total_vehicles",
+    "car",
+    "motorcycle",
+    "bus",
+    "truck"
+  ],
+  "target_column": "total_vehicles",
+  "junctions": [
+    {
+      "id": "junction_1",
+      "name": "Silk Board Arterial",
+      "description": "High-volume commuter corridor dominated by cars and cabs",
+      "iid_samples": 5152,
+      "non_iid_samples": 6901
+    },
+    {
+      "id": "junction_2",
+      "name": "Majestic Urban Core",
+      "description": "Dense city center with high two-wheeler / motorcycle share",
+      "iid_samples": 5136,
+      "non_iid_samples": 4351
+    },
+    {
+      "id": "junction_3",
+      "name": "Hebbal Ring Road",
+      "description": "Freight & logistics corridor with high truck & bus ratio",
+      "iid_samples": 5136,
+      "non_iid_samples": 4847
+    },
+    {
+      "id": "junction_4",
+      "name": "Indiranagar Central",
+      "description": "Mixed commercial & residential grid with moderate traffic",
+      "iid_samples": 5136,
+      "non_iid_samples": 4461
+    }
+  ],
+  "plots_generated": [
+    "traffic_flow_overview.png",
+    "iid_vs_non_iid_distributions.png",
+    "chronological_splits_iid.png",
+    "chronological_splits_non_iid.png"
+  ]
+}
